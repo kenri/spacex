@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { styled } from '@linaria/react'
+import LaunchSiteChart from 'components/LaunchSiteChart'
+import LaunchSiteList from 'components/LaunchSiteList'
+
+const Container = styled.div`
+  padding: 20px;
+`
+
+const Content = styled.div`
+  display: flex;
+`
+
+const Title = styled.h1`
+  color: #161c2d;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <Title>SpaceX</Title>
+
+      <Content>
+        <LaunchSiteList />
+
+        <LaunchSiteChart />
+      </Content>
+    </Container>
+  )
 }
 
-export default App;
+export default App
